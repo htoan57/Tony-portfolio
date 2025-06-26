@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Toan Nguyen</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Ensure particles.js covers the hero section */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      color: #ffffff;
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      list-style: none;
+      overflow-x: auto;
+    }
+
+    .timeline-item {
+      flex: 1;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      position: relative;
+      text-align: center;
+    }
+
+    .timeline-item::before,
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: #ccc;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .timeline-item::before {
+      left: 0;
+    }
+
+    .timeline-item::after {
+      right: 0;
+    }
+
+    .timeline-item:first-child::before,
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: white;
+      border-radius: 6px;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .timeline-date {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+
+    .timeline-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .timeline-description {
+      font-size: 16px;
+      color: #6c757d;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .info-item i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+
+    /* make sure the hero text sits above everything */
+    .hero .container {
+      position: relative;
+      z-index: 10;
+      color: #ffffff;
+    }
+
+    /* force the typed.js text & cursor to white */
+    .hero .container .typed,
+    .hero .container .typed-cursor {
+      color: #ffffff !important;
+    }
+
+    section#about {
+      min-height: 100vh;
+      padding: 60px 0;
+      box-sizing: border-box;
+    }
+
+    section#portfolio {
+      min-height: 100vh;
+      padding: 60px 0;
+      box-sizing: border-box;
+    }
+
+    section#contact {
+      min-height: 100vh;
+      padding: 60px 0;
+      box-sizing: border-box;
+    }
+    
+    /* make the container the positioning context */
+    .container.position-relative {
+      position: relative;
+    }
+
+    /* 2) Style the pagination bar */
+    .pagination-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+
+    /* 3) Buttons look & feel */
+    .pagination-btn {
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .pagination-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* 4) Indicator text */
+    #paginationIndicator {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+    </div>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Toan Nguyen</h1>
+    </a>
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/toannnguyenhuu" class="linkedin" target="_blank"><i
+          class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/htoan57" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>       
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section-content dark-background">
+      <div id="particles-js"></div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100" style="text-align: center">
+        <h2 style="font-size: 70px;">Welcome to Toan’s Analytics Hub</h2>
+        <p style="font-size: 30px;">I can <span class="typed"
+            data-typed-items="clean data, query databases, generate insights, tell stories">generate insights</span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-3">
+            <img src="assets/img/my-profile-img.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-5 content">
+            <h2>Toan Nguyen</h2>
+            <div class="row">
+              <div class="col-lg-10">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+61494096966</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>htoan.nguyen57@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Data Science</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>University:</strong> <span>University of South Australia</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <blockquote style="font-style:italic; background:#f5fafc; border-left:6px solid #6dafdf; padding:1.5em; margin:2em 10%; color:#4a3f33;">
+          Hi, I’m Toan. I enjoy exploring data with Python, R, and SQL to uncover patterns, build dashboards,
+          and try out new analysis techniques. I’m always learning, whether it’s brushing up on visualization best practices
+          or experimenting with simple predictive models. Outside of work, you’ll often find me traveling to new places and
+          capturing the world through my camera lens. Feel free to browse my projects to see how I’m turning raw numbers into
+          helpful insights—and bringing a bit of wanderlust into the mix!
+        </blockquote>
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Projects Section -->
+    <section id="portfolio" class="portfolio section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>Explore my key projects showcasing expertise in data domain. Each project highlights my skills in 
+          data science/data analytics and commitment to excellence. Discover my approach and capabilities here.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="200">
+        <!-- ▲ pagination controls ▲ -->
+        <div class="pagination-bar">
+          <button id="prevPage" class="pagination-btn">&larr;</button>
+          <span id="paginationIndicator">1 / 1</span>
+          <button id="nextPage" class="pagination-btn">&rarr;</button>
+        </div>
+
+        <!-- your 3×2 grid of items -->
+        <div class="row gy-4 isotope-container" id="projectContainer">
+          <!-- 6+ .portfolio-item cards -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details-1.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details-2.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- etc. -->
+        </div>
+      </div>
+    </section><!-- /Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Thank you for visiting! Feel free to reach out for career opportunities or further discussions.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Adelaide, SA 5000</p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Me</h3>
+                  <p>+61 494 096 966</p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Me</h3>
+                  <p>htoan.nguyen57@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Column -->
+          <div class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="500">
+            <div class="map-container" style="position:relative; width:100%; height:350px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.2119863994644!2d138.58588241234332!3d-34.926220072727105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cf3b52b9cb8f%3A0x41d1ee0b7caacfb0!2sUniLodge%20on%20Waymouth%20-%20Student%20Accommodation%20Adelaide!5e0!3m2!1sen!2sau!4v1720491562382!5m2!1sen!2sau"
+                frameborder="0" style="border:0; width:100%; height:100%;" allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div><!-- End Map Column -->
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <strong>Toan Nguyen</strong> All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    /* Initialize particles.js */
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 120,
+          density: {
+            enable: true,
+            value_area: 500
+          }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#ffffff"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 80,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: true,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "window",
+        events: {
+          onhover: {
+            enable: false,
+            mode: "repulse" // Change mode to repulse on hover
+          },
+          onclick: {
+            enable: false,
+            mode: "push"
+          },
+          resize: false
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: -100, // Adjust repulse distance as needed
+            duration: 0.1
+          },
+          push: {
+            particles_nb: 10
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container   = document.getElementById('projectContainer');
+      const items       = Array.from(container.querySelectorAll('.portfolio-item'));
+      const prevBtn     = document.getElementById('prevPage');
+      const nextBtn     = document.getElementById('nextPage');
+      const indicator   = document.getElementById('paginationIndicator');
+
+      const perPage = 3;                           // <- exactly 3 per page
+      let page      = 1;
+      const total   = Math.ceil(items.length / perPage);
+
+      function render() {
+        const start = (page - 1) * perPage;
+        items.forEach((item, i) => {
+          item.style.display = (i >= start && i < start + perPage)
+                              ? ''   // show
+                              : 'none'; // hide
+        });
+        indicator.textContent = `${page} / ${total}`;
+        prevBtn.disabled = (page === 1);
+        nextBtn.disabled = (page === total);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (page > 1) { page--; render(); }
+      });
+      nextBtn.addEventListener('click', () => {
+        if (page < total) { page++; render(); }
+      });
+
+      render();
+    });
+  </script>
+
+</body>
+</html>
