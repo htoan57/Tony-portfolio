@@ -197,6 +197,53 @@
       font-weight: 600;
       font-size: 1.1rem;
     }
+
+    .business-card {
+    background: linear-gradient(135deg,#f5fafc);
+    max-width: 900px;
+    margin: auto;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .contact-row {
+    background: white;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    cursor: default;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    min-width: 260px;
+  }
+
+  .contact-row:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+    background: #e1f5fe;
+  }
+
+  .icon-circle {
+    color: #0288d1;
+    background: #bbdefb;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: color 0.3s ease, background 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .contact-row:hover .icon-circle {
+    color: #01579b;
+    background: #81d4fa;
+  }
+
+  h5 {
+    font-weight: 600;
+    color: #01579b;
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: #444;
+    margin: 0;
+  }
   </style>
 </head>
 
@@ -242,33 +289,41 @@
     <section id="about" class="about section">
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
+        <p style="text-align: justify;">
+          Hi, I’m Toan. I enjoy exploring data with Python, R, and SQL to uncover patterns, build dashboards, and try out new analysis techniques. I’m always learning, whether it’s brushing up on visualisation best practices or experimenting with simple predictive models.
+        </p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <img src="assets/img/my-profile-img.png" class="img-fluid" alt="">
           </div>
-          <div class="col-lg-5 content">
-            <h2>Toan Nguyen</h2>
+          <div class="col-lg-8 content">
+            <h2>Data Science & Analytics Professional</h2>
+            <p class="fst-italic py-3" style="text-align: justify;">
+               Outside of work, you’ll often find me travelling to new places and capturing the world through my camera lens. 
+              Feel free to browse my projects to see how I’m turning raw numbers into helpful insights—and bringing a bit of wanderlust into the mix!
+            </p>
             <div class="row">
-              <div class="col-lg-10">
+              <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+61494096966</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>htoan.nguyen57@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Data Science</span></li>
+                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Data Science</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>University:</strong> <span>University of South Australia</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>htoan.nguyen57@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+61 494 096 966</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Specialisation:</strong> <span>Data Analysis, Data Science</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Tools:</strong> <span>Python, R, SQL, Power BI, Tableau</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Tech Stack:</strong> <span>Jupyter (Anaconda), Git, RStudio</span></li>                 
+                  <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>English, Vietnamese</span></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <blockquote style="font-style:italic; background:#f5fafc; border-left:6px solid #6dafdf; padding:1.5em; margin:2em 10%; color:#4a3f33;">
-          Hi, I’m Toan. I enjoy exploring data with Python, R, and SQL to uncover patterns, build dashboards,
-          and try out new analysis techniques. I’m always learning, whether it’s brushing up on visualization best practices
-          or experimenting with simple predictive models. Outside of work, you’ll often find me traveling to new places and
-          capturing the world through my camera lens. Feel free to browse my projects to see how I’m turning raw numbers into
-          helpful insights—and bringing a bit of wanderlust into the mix!
-        </blockquote>
       </div>
     </section><!-- /About Section -->
 
@@ -329,44 +384,37 @@
         <h2>Contact</h2>
         <p>Thank you for visiting! Feel free to reach out for career opportunities or further discussions.</p>
       </div>
+
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-5">
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <div class="business-card p-5 rounded shadow-lg">
+              <div class="info-item d-flex align-items-center mb-4 p-3 rounded contact-row">
+                <i class="bi bi-geo-alt me-4 fs-3 icon-circle"></i>
                 <div>
-                  <h3>Address</h3>
-                  <p>Adelaide, SA 5000</p>
+                  <h5 class="mb-1">Location</h5>
+                  <p class="mb-0">Adelaide, SA 5000</p>
                 </div>
               </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
+              <div class="info-item d-flex align-items-center mb-4 p-3 rounded contact-row">
+                <i class="bi bi-telephone me-4 fs-3 icon-circle"></i>
                 <div>
-                  <h3>Call Me</h3>
-                  <p>+61 494 096 966</p>
+                  <h5 class="mb-1">Phone</h5>
+                  <p class="mb-0">+61 494 096 966</p>
                 </div>
               </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+              <div class="info-item d-flex align-items-center p-3 rounded contact-row">
+                <i class="bi bi-envelope me-4 fs-3 icon-circle"></i>
                 <div>
-                  <h3>Email Me</h3>
-                  <p>htoan.nguyen57@gmail.com</p>
+                  <h5 class="mb-1">Email</h5>
+                  <p class="mb-0">htoan.nguyen57@gmail.com</p>
                 </div>
               </div>
             </div>
-          </div><!-- End Info Column -->
-          <div class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="500">
-            <div class="map-container" style="position:relative; width:100%; height:350px;">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.2119863994644!2d138.58588241234332!3d-34.926220072727105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cf3b52b9cb8f%3A0x41d1ee0b7caacfb0!2sUniLodge%20on%20Waymouth%20-%20Student%20Accommodation%20Adelaide!5e0!3m2!1sen!2sau!4v1720491562382!5m2!1sen!2sau"
-                frameborder="0" style="border:0; width:100%; height:100%;" allowfullscreen loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div><!-- End Map Column -->
+          </div>
         </div>
       </div>
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
